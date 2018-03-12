@@ -29,10 +29,10 @@ $('#pixelCanvas').on('click', 'td', function (e) {
     $('#'+$(this).attr('id')).css('background-color', color);
 });
 
-$(document).ready(function(){
+//$(document).ready(function(){
   $('#colorPicker').change(function() {
     console.log('color: ' +  $(this).val());
     color = $(this).val();
 
   })
-});
+//});
