@@ -34,5 +34,5 @@ $('#pixelCanvas').on('click', 'td', function (e) {
     console.log('color: ' +  $(this).val());
     color = $(this).val();
 
-  })
+  });
 //});
