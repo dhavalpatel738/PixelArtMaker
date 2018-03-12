@@ -1,7 +1,6 @@
 // Select color input
 // Select size input
 
-// When size is submitted by the user, call makeGrid()
 function makeGrid() {
   var height = $('#inputHeight').val();
   var width = $('#inputWidth').val();
@@ -18,21 +17,24 @@ function makeGrid() {
   $('#pixelCanvas').append(trTd);
 }
 
+//Default color
 var color = "#000000";
+
+//Preventing submit default action and call to makeGrid
 $('#sizePicker').submit(function(event) {
   event.preventDefault();
   makeGrid();
 });
 
+//Fill cell with color
 $('#pixelCanvas').on('click', 'td', function (e) {
     //console.log($(this).attr('id'));
     $('#'+$(this).attr('id')).css('background-color', color);
 });
 
-//$(document).ready(function(){
+//Change var color to user selected color
   $('#colorPicker').change(function() {
     console.log('color: ' +  $(this).val());
     color = $(this).val();
 
   });
-//});
